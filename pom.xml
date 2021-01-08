@@ -3,11 +3,11 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.myspace</groupId>
-  <artifactId>test</artifactId>
+  <artifactId>test10</artifactId>
   <version>1.0.2</version>
   <packaging>kjar</packaging>
-  <name>test</name>
-  <description>test</description>
+  <name>test1.1</name>
+  <description>test1.2</description>
   <distributionManagement>
     <repository>
       <id>smg.nexus</id>
