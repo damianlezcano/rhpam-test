@@ -1,0 +1,58 @@
+  Escenario: 1) Resolver -> Inicio exitoso
+  
+  <font size="2" color="gray">
+  Se toma y abre el trámite. Se visualizan los campos cargados, permitiendo sólo la edición de observaciones. El sistema permite cargar hasta 5 archivos (optativo). Depende del caso, se puede marcar si se ha realizado el contacto telefónico con el socio. 
+  En función a esa marca, más adelante se enviará el email con el link a la encuesta. (interacción con sistema BDT revisar detalles técnicos) Se selecciona la próxima acción para transicionar la tarea. (Resuelta / Consulta / Rechazada / Completar Información / Comunicar Resolución).
+  </font>
+  
+  ---------------------------------------
+
+  Dado que soy 'Damian' y pertenezco al grupo 'SGI'
+  
+  Entonces verificar el flujo de ejecución sea el siguiente: Inicio -> "Inserción de datos en el CRM, Resolver" -> Fin
+
+  # ------------------------------------------------------------
+  
+  Escenario: 2) Resolver -> Inicio exitoso con confirmacion de reintento
+
+  Dado que soy 'Damian' y pertenezco al grupo 'SGI'
+  
+  Y falla la Inserción de datos en el CRM
+  
+  Entonces verificar el flujo de ejecución sea el siguiente: Inicio -> "Inserción de datos en el CRM" -> Fin
+
+  # ------------------------------------------------------------
+  
+  Escenario: 3) Resolver -> Inicio fallido con confirmacion de reintento
+
+  Dado que soy 'Damian' y pertenezco al grupo 'SGI'
+  
+  Y falla la Inserción de datos en el CRM
+  
+  Entonces verificar el flujo de ejecución sea el siguiente: Inicio -> "Inserción de datos en el CRM" -> Fin
+
+
+
+
+
+
+
+
+
+
+
+  # ------------------------------------------------------------
+
+  Escenario: 5) Consulta Rechazada
+  
+  <font size="2" color="gray">
+  Se toma y abre el trámite. Se completan los motivos del rechazo y se finaliza el trámite.
+  </font>
+  
+  # ------------------------------------------------------------
+
+  Escenario: 6) Completar Informacion
+  
+  <font size="2" color="gray">
+  Se toma y abre el trámite. Se completan las observaciones y se puede devolver o finalizar el trámite. Si se selecciona Devolver, vuelve a la tarea de Resolver. Siempre se vuelve a la sucursal de origen del trámite, a excepción de la sucursal denominada call center, donde el trámite debe dirigirse a “Back Office Call Center” (ABM_BACK_OFFICE_CALL_CENTER).  Si se selecciona Finalizar, avanza a finalizada.
+  </font>
