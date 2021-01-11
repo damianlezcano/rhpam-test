@@ -4,10 +4,17 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.myspace</groupId>
   <artifactId>test</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.2</version>
   <packaging>kjar</packaging>
   <name>test</name>
-  <description></description>
+  <description>test</description>
+  <distributionManagement>
+    <repository>
+      <id>smg.nexus</id>
+      <name>Release Repository</name>
+      <url>http://smg-devtools.swm.com.ar/nexus/content/repositories/smg-bpm-rhpam</url>
+    </repository>
+  </distributionManagement>
   <dependencies>
     <dependency>
       <groupId>org.kie</groupId>
